@@ -43,3 +43,24 @@ task1/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml         # GitHub Actions CI/CD workflow
+### **How to Run**
+**Clone the repository:**
+git clone https://github.com/nyrahul/wisecow
+cd wisecow
+
+**Build and push the Docker image:**
+docker build -t <your-dockerhub-username>/wisecow:latest .
+docker push <your-dockerhub-username>/wisecow:latest
+
+**Deploy to Kubernetes:**
+kubectl apply -f kubernetes/wisecow-deployment.yaml
+kubectl apply -f kubernetes/wisecow-service.yaml
+
+**Access the application via the exposed service:**
+Local cluster: minikube service wisecow-service
+Cloud cluster: Use kubectl get svc to get the LoadBalancer IP.
+
+**Trigger CI/CD by committing changes to the repository:**
+git add .
+git commit -m "Update application"
+git push origin main
