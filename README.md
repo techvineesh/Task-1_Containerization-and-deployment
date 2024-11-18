@@ -43,6 +43,7 @@ task1/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml         # GitHub Actions CI/CD workflow
+```
 ### **How to Run**
 **Clone the repository:**
 git clone https://github.com/nyrahul/wisecow
