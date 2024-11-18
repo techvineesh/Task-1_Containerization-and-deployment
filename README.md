@@ -34,7 +34,7 @@ This repository contains two main tasks:
 ---
 
 ### **Repository Structure**
-plaintext
+```plaintext
 task1/
 ├── Dockerfile                 # Dockerfile for containerization
 ├── kubernetes/
